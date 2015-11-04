@@ -1,0 +1,310 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Youtube to Posts v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-11-04 13:46:41+0000\n"
+"Last-Translator: admin <enguerrandeep@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: admin.php:8
+#@ youtube-to-posts
+msgid "Approve"
+msgstr ""
+
+#: admin.php:9
+#@ youtube-to-posts
+msgid "Deny"
+msgstr ""
+
+#: admin.php:10
+#@ youtube-to-posts
+msgid "You have changed the query parameters, remember to click on Save Changes to update the results."
+msgstr ""
+
+#: admin.php:11
+#@ youtube-to-posts
+msgid "There is an error with your API key, it has been rejected by Google API Service."
+msgstr ""
+
+#: admin.php:15
+#@ youtube-to-posts
+msgid "Media added !"
+msgstr ""
+
+#: admin.php:22
+#@ youtube-to-posts
+msgid "Youtube query options"
+msgstr ""
+
+#: admin.php:29
+#@ youtube-to-posts
+msgid "Query type:"
+msgstr ""
+
+#: admin.php:38
+#@ youtube-to-posts
+msgid "Query:"
+msgstr ""
+
+#: admin.php:39
+#@ youtube-to-posts
+msgid "Type your query."
+msgstr ""
+
+#: admin.php:40
+#@ youtube-to-posts
+msgid "If your query type is a playlist or a user, then you must type the relevant playlist / user ID."
+msgstr ""
+
+#: admin.php:44
+#@ youtube-to-posts
+msgid "Max results?"
+msgstr ""
+
+#: admin.php:45
+#@ youtube-to-posts
+msgid "Default value is 30"
+msgstr ""
+
+#: admin.php:49
+#@ youtube-to-posts
+msgid "Post type to feed:"
+msgstr ""
+
+#: admin.php:67
+#@ youtube-to-posts
+msgid "Taxonomy term to feed:"
+msgstr ""
+
+#: admin.php:86
+#@ youtube-to-posts
+msgid "Published:"
+msgstr ""
+
+#: admin.php:114
+#@ youtube-to-posts
+msgid "Results from Youtube for:"
+msgstr ""
+
+#: admin.php:115
+#@ youtube-to-posts
+msgid "Results are ordered by date, newest first."
+msgstr ""
+
+#: admin.php:117
+#@ youtube-to-posts
+msgid "Video preview"
+msgstr ""
+
+#: admin.php:118
+#@ youtube-to-posts
+msgid "Video title"
+msgstr ""
+
+#: admin.php:119
+#@ youtube-to-posts
+msgid "Video description"
+msgstr ""
+
+#: admin.php:120
+#@ youtube-to-posts
+msgid "Upload date"
+msgstr ""
+
+#: admin.php:121
+#@ youtube-to-posts
+msgid "Actions"
+msgstr ""
+
+#: admin.php:124
+#@ youtube-to-posts
+msgid "Getting the posts, please wait..."
+msgstr ""
+
+#: admin.php:127
+#@ youtube-to-posts
+msgid "Load more videos"
+msgstr ""
+
+#: admin.php:132
+#@ youtube-to-posts
+msgid "Your Youtube API access is not defined, go set it on the <a href=\"options-general.php?page=youtube-to-posts\">settings page</a>."
+msgstr ""
+
+#: options.php:12
+#@ youtube-to-posts
+msgid "Google Youtube API settings :"
+msgstr ""
+
+#: options.php:16
+#@ youtube-to-posts
+msgid "Google Youtube API key:"
+msgstr ""
+
+#: options.php:17
+#@ youtube-to-posts
+msgid "Paste here your consumer key"
+msgstr ""
+
+#: options.php:22
+#@ youtube-to-posts
+msgid "Post content format :"
+msgstr ""
+
+#: options.php:24
+#@ youtube-to-posts
+msgid "You can customize the way Youtube content will feed your posts with a template tag system. So:"
+msgstr ""
+
+#: options.php:29
+#, php-format
+#@ youtube-to-posts
+msgid "{%title%} is the title of the Youtube video"
+msgstr ""
+
+#: options.php:30
+#, php-format
+#@ youtube-to-posts
+msgid "{%description%} is the description (500 chars max - Youtube restriction) of the Youtube video"
+msgstr ""
+
+#: options.php:31
+#, php-format
+#@ youtube-to-posts
+msgid "{%embed%} will display the embed code of the video"
+msgstr ""
+
+#: options.php:32
+#, php-format
+#@ youtube-to-posts
+msgid "{%thumbnail%} will display the thumbnail of the video"
+msgstr ""
+
+#: options.php:33
+#, php-format
+#@ youtube-to-posts
+msgid "{%query%} will display the query you typed"
+msgstr ""
+
+#: options.php:34
+#, php-format
+#@ youtube-to-posts
+msgid "{%user%} will display the uploader of the video"
+msgstr ""
+
+#: options.php:35
+#, php-format
+#@ youtube-to-posts
+msgid "{%date%} will display the upload date of the video"
+msgstr ""
+
+#: options.php:40
+#@ youtube-to-posts
+msgid "Title format of your videos:"
+msgstr ""
+
+#: options.php:40
+#, php-format
+#@ youtube-to-posts
+msgid "Default title is just {%title%}"
+msgstr ""
+
+#: options.php:41
+#: options.php:45
+#, php-format
+#@ youtube-to-posts
+msgid "e.g. Last Video of {%user%} - {%title%}"
+msgstr ""
+
+#: options.php:44
+#@ youtube-to-posts
+msgid "Content format of your videos:"
+msgstr ""
+
+#: options.php:44
+#, php-format
+#@ youtube-to-posts
+msgid "Default content is {%embed%}<br>{%description%}"
+msgstr ""
+
+#: options.php:49
+#@ youtube-to-posts
+msgid "How can I get a Google API key?"
+msgstr ""
+
+#: options.php:51
+#@ youtube-to-posts
+msgid "To use this plugin, you'll need to create a Google Youtube API key. Dealing with Google Developers Console can be a bit confusing, you need to : create a project, make the API data you need active and generate a public API key. Here's how to do that:"
+msgstr ""
+
+#: options.php:56
+#@ youtube-to-posts
+msgid "Login to Google using your Google account."
+msgstr ""
+
+#: options.php:58
+#@ youtube-to-posts
+msgid "Go to the <a target=\"_blank\" href=\"https://console.developers.google.com/project\">Developers Console > Projects</a>"
+msgstr ""
+
+#: options.php:59
+#@ youtube-to-posts
+msgid "Click on \"Create a project\" (you'll need to give it a title and an ID)"
+msgstr ""
+
+#: options.php:60
+#@ youtube-to-posts
+msgid "When your project his created, click on it on the project list"
+msgstr ""
+
+#: options.php:61
+#@ youtube-to-posts
+msgid "Go to the section API and authentication > API, and search for YouTube Data API v3, and click on the button on the right to make this API active."
+msgstr ""
+
+#: options.php:62
+#@ youtube-to-posts
+msgid "Go to the Credentials section > Access to the public API anc click on the button \"Make a key\" > Server key"
+msgstr ""
+
+#: options.php:63
+#@ youtube-to-posts
+msgid "On the next box, you'll need to tell on which domains you allow the use of your app (e.g. 127.0.0.1, www.mydomain.com, etc)."
+msgstr ""
+
+#: options.php:64
+#@ youtube-to-posts
+msgid "Now it should have generated a API Key (e.g. AIzaFyD0aPCQjLFRbLnh4RKbVBlBgVCVSwjbFAg), copy-paste it on the box above."
+msgstr ""
+
+#: options.php:65
+#@ youtube-to-posts
+msgid "It's done, congrats :)"
+msgstr ""
+
+#: youtube-to-posts.php:263
+#: youtube-to-posts.php:264
+#@ yt_to_posts
+msgid "Youtube to Posts"
+msgstr ""
+
+#: youtube-to-posts.php:349
+#: youtube-to-posts.php:350
+#@ default
+msgid "Y2P rejects"
+msgstr ""
+
