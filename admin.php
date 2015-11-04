@@ -58,7 +58,7 @@
         }
         ?>
       </select>
-      <p class="description">If you choose a custom Post Type, be sure that it supports post thumbnails (if you want video thumbnail in your post)</p>
+      <p class="description"><?php _e('If you select a custom post type, be sure it supports Post Thumbnails.', 'youtube-to-posts') ?></p>
     </div>
     <div class="option" id="catsSelect">
       <label><?php _e('Taxonomy term to feed:', 'youtube-to-posts') ?></label>

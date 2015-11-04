@@ -26,23 +26,23 @@
 
     </p>
     <ul>
-        <li><?php _e('{%title%} is the title of the Youtube video', 'youtube-to-posts') ?></li>
-        <li><?php _e('{%description%} is the description (500 chars max - Youtube restriction) of the Youtube video', 'youtube-to-posts') ?></li>
-        <li><?php _e('{%embed%} will display the embed code of the video', 'youtube-to-posts') ?></li>
-        <li><?php _e('{%thumbnail%} will display the thumbnail of the video', 'youtube-to-posts') ?></li>
-        <li><?php _e('{%query%} will display the query you typed', 'youtube-to-posts') ?></li>
-        <li><?php _e('{%user%} will display the uploader of the video', 'youtube-to-posts') ?></li>
-        <li><?php _e('{%date%} will display the upload date of the video', 'youtube-to-posts') ?></li>
+        <li><?php _e('%title% is the title of the Youtube video', 'youtube-to-posts') ?></li>
+        <li><?php _e('%description% is the description (500 chars max - Youtube restriction) of the Youtube video', 'youtube-to-posts') ?></li>
+        <li><?php _e('%embed% will display the embed code of the video', 'youtube-to-posts') ?></li>
+        <li><?php _e('%thumbnail% will display the thumbnail of the video', 'youtube-to-posts') ?></li>
+        <li><?php _e('%query% will display the query you typed', 'youtube-to-posts') ?></li>
+        <li><?php _e('%user% will display the uploader of the video', 'youtube-to-posts') ?></li>
+        <li><?php _e('%date% will display the upload date of the video', 'youtube-to-posts') ?></li>
       </ul>
    <table class="form-table">
         
          <tr valign="top">
-        <th scope="row"><?php _e('Title format of your videos:', 'youtube-to-posts') ?><p class="description"><?php _e('Default title is just {%title%}', 'youtube-to-posts') ?></p></th>
-        <td><input type="text" placeholder="<?php _e('e.g. Last Video of {%user%} - {%title%}', 'youtube-to-posts') ?>" style="min-width:350px;" name="yt_to_posts_title_format" value="<?php echo esc_attr( get_option('yt_to_posts_title_format') ); ?>" /></td>
+        <th scope="row"><?php _e('Title format of your videos:', 'youtube-to-posts') ?><p class="description"><?php _e('Default title is just %title%', 'youtube-to-posts') ?></p></th>
+        <td><input type="text" placeholder="<?php _e('e.g. Last Video of %user% - %title%', 'youtube-to-posts') ?>" style="min-width:350px;" name="yt_to_posts_title_format" value="<?php echo esc_attr( get_option('yt_to_posts_title_format') ); ?>" /></td>
         </tr> 
          <tr valign="top">
-        <th scope="row"><?php _e('Content format of your videos:', 'youtube-to-posts') ?><p class="description"><?php _e('Default content is {%embed%}<br>{%description%}', 'youtube-to-posts') ?></p></th>
-        <td><textarea placeholder="<?php _e('e.g. Last Video of {%user%} - {%title%}', 'youtube-to-posts') ?>" style="min-width:350px;" name="yt_to_posts_content_format" value="<?php echo esc_attr( get_option('yt_to_posts_content_format') ); ?>" /><?php echo esc_attr( get_option('yt_to_posts_content_format') ); ?></textarea><p class="description">HTML tags are allowed</p></td>
+        <th scope="row"><?php _e('Content format of your videos:', 'youtube-to-posts') ?><p class="description"><?php _e('Default content is %embed%<br>%description%', 'youtube-to-posts') ?></p></th>
+        <td><textarea placeholder="<?php _e('e.g. Last Video of %user% - %title%', 'youtube-to-posts') ?>" style="min-width:350px;" name="yt_to_posts_content_format" value="<?php echo esc_attr( get_option('yt_to_posts_content_format') ); ?>" /><?php echo esc_attr( get_option('yt_to_posts_content_format') ); ?></textarea><p class="description">HTML tags are allowed</p></td>
         </tr> 
     </table>
     <hr>

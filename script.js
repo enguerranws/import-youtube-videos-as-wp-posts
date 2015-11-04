@@ -147,6 +147,7 @@ var ajaxGetYoutube = {
 
 
                     if (ids.indexOf(data.items[i].id) === -1) {
+                        
                         html += '<li class="result" data-id="' + data.items[i].id + '"><div class="thumb"><a href="' + data.items[i].id + '" target="_blank" ><img src="' + data.items[i].thumb_url + '" /></a></div><div>' + data.items[i].title + '</div><div class="content">' + data.items[i].description + '</div><div class="date">' + data.items[i].date + '</div><div class="buttons"><a data-id="' + data.items[i].id + '" data-src="' + data.items[i].media_url + '"  data-content="' + data.items[i].description + '" data-title= "' + data.items[i].title + '" class="btn-deny button button-secondary" href="#">' + ajaxGetYoutube.trans.deny + '</a><a data-title= "' + data.items[i].title + '" data-id="' + data.items[i].id + '" data-src="' + data.items[i].media_url + '" data-content="' + data.items[i].description + '" data-date="' + data.items[i].date + '" data-embed-url="' + data.items[i].embed_url + '" data-media-url="' + data.items[i].media_url + '" data-thumbnail-url="' + data.items[i].thumb_url + '" data-user="' + data.items[i].channel_title + '" class="btn-approve button button-primary" href="#">' + ajaxGetYoutube.trans.approve + '</a></div></li>';
 
                     }

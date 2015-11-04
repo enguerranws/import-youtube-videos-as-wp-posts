@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Youtube to Posts v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-02-03 17:34:15+0000\n"
+"PO-Revision-Date: 2015-11-04 14:22:00+0000\n"
 "Last-Translator: admin <enguerrandeep@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,99 +20,84 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: youtube-to-posts.php:187
-#: youtube-to-posts.php:188
+#: youtube-to-posts.php:263
+#: youtube-to-posts.php:264
 #@ yt_to_posts
 msgid "Youtube to Posts"
 msgstr "Youtube to Posts"
 
-#: youtube-to-posts.php:270
-#: youtube-to-posts.php:271
+#: youtube-to-posts.php:349
+#: youtube-to-posts.php:350
 #@ default
 msgid "Y2P rejects"
 msgstr "Y2P rejects"
 
-#: admin.php:10
+#: admin.php:13
 #@ youtube-to-posts
 msgid "Media added !"
 msgstr "Vidéo ajoutée !"
 
-#: admin.php:15
+#: admin.php:19
 #@ youtube-to-posts
 msgid "Youtube query options"
 msgstr "Options de requête vers Youtube"
 
-#: admin.php:23
+#: admin.php:35
 #@ youtube-to-posts
 msgid "Query:"
 msgstr "Requête :"
 
-#: admin.php:24
-#@ youtube-to-posts
-msgid "Don't type # or @, just the query."
-msgstr "Ne tapez pas # ou @, juste les mots-clés."
-
-#: admin.php:28
+#: admin.php:41
 #@ youtube-to-posts
 msgid "Max results?"
 msgstr "Nombre de résultats maximum&nbsp;?"
 
-#: admin.php:29
+#: admin.php:42
 #@ youtube-to-posts
 msgid "Default value is 30"
 msgstr "La valeur par défaut est de 30"
 
-#: admin.php:32
-#@ youtube-to-posts
-msgid "Category to feed:"
-msgstr "Catégorie à alimenter :"
-
-#: admin.php:51
+#: admin.php:46
 #@ youtube-to-posts
 msgid "Post type to feed:"
 msgstr "Type de post à alimenter :"
 
-#: admin.php:65
+#: admin.php:103
 #@ youtube-to-posts
 msgid "Results from Youtube for:"
 msgstr "Résultats récupérés depuis Youtube pour la requête :"
 
-#: admin.php:75
+#: admin.php:113
 #@ youtube-to-posts
 msgid "Getting the posts, please wait..."
 msgstr "Chargement des vidéos, veuillez patienter..."
 
-#: admin.php:78
+#: admin.php:116
 #@ youtube-to-posts
 msgid "Load more videos"
 msgstr "Charger plus de vidéos"
 
-#: admin.php:81
-#@ youtube-to-posts
-msgid "Your Youtube API access is not defined, go set it on the settings page."
-msgstr "Votre clé API Youtube n'est pas renseignée, veuillez la préciser sur la page de réglages."
-
-#: admin.php:68
+#: admin.php:106
 #@ youtube-to-posts
 msgid "Video preview"
 msgstr "Miniature"
 
-#: admin.php:69
+#: admin.php:107
 #@ youtube-to-posts
 msgid "Video title"
 msgstr "Titre de la vidéo"
 
-#: admin.php:70
+#: admin.php:108
 #@ youtube-to-posts
 msgid "Video description"
 msgstr "Description de la vidéo"
 
-#: admin.php:71
+#: admin.php:109
 #@ youtube-to-posts
 msgid "Upload date"
 msgstr "Date d'upload"
 
-#: admin.php:72
+#: admin.php:110
 #@ youtube-to-posts
 msgid "Actions"
 msgstr "Actions"
@@ -132,13 +117,199 @@ msgstr "Clé API Youtube :"
 msgid "Paste here your consumer key"
 msgstr "Collez ici votre consumer key"
 
-#: admin.php:6
+#: admin.php:7
 #@ youtube-to-posts
 msgid "Approve"
 msgstr "Enregistrer"
 
-#: admin.php:7
+#: admin.php:8
 #@ youtube-to-posts
 msgid "Deny"
 msgstr "Rejeter"
+
+#: admin.php:9
+#@ youtube-to-posts
+msgid "You have changed the query parameters, remember to click on Save Changes to update the results."
+msgstr "Vous avez changé les paramètres de votre requête, n\\'oubliez pas de cliquer sur Enregistrer les modifications pour mettre à jour les résultats."
+
+#: admin.php:10
+#@ youtube-to-posts
+msgid "There is an error with your API key, it has been rejected by Google API Service."
+msgstr "Il semble y avoir une erreur avec votre configuration (clé API Google, ID playlist ou de chaîne Youtube), veuillez vérifier ces paramètres."
+
+#: admin.php:26
+#@ youtube-to-posts
+msgid "Query type:"
+msgstr "Type de requête :"
+
+#: admin.php:36
+#@ youtube-to-posts
+msgid "Type your query."
+msgstr "Tapez votre requête."
+
+#: admin.php:37
+#@ youtube-to-posts
+msgid "If your query type is a playlist or a user, then you must type the relevant playlist / user ID."
+msgstr "Si votre requête correspond à une playlist ou une chaîne Youtube, vous devez renseigner l'ID de celle-ci."
+
+#: admin.php:64
+#@ youtube-to-posts
+msgid "Taxonomy term to feed:"
+msgstr "Terme de taxonomie à remplir :"
+
+#: admin.php:81
+#@ youtube-to-posts
+msgid "Published:"
+msgstr "Publié:"
+
+#: admin.php:104
+#@ youtube-to-posts
+msgid "Results are ordered by date, newest first."
+msgstr "Les résultats sont rangés par date, les plus récents en premier."
+
+#: admin.php:120
+#@ youtube-to-posts
+msgid "Your Youtube API access is not defined, go set it on the <a href=\"options-general.php?page=youtube-to-posts\">settings page</a>."
+msgstr "Vous n'avez pas renseigné de clé d'API Youtube, renseignez-là sur <a href=\"options-general.php?page=youtube-to-posts\">la page d'options</a>."
+
+#: options.php:22
+#@ youtube-to-posts
+msgid "Post content format :"
+msgstr "Format du contenu de l'article :"
+
+#: options.php:24
+#@ youtube-to-posts
+msgid "You can customize the way Youtube content will feed your posts with a template tag system. So:"
+msgstr "Vous pouvez personnaliser la façon dont vous alimentez votre site avec des contenus Youtube :"
+
+#: options.php:40
+#@ youtube-to-posts
+msgid "Title format of your videos:"
+msgstr "Format de titre des articles ajoutés :"
+
+#: options.php:44
+#@ youtube-to-posts
+msgid "Content format of your videos:"
+msgstr "Format du contenu des articles ajoutés :"
+
+#: options.php:49
+#@ youtube-to-posts
+msgid "How can I get a Google API key?"
+msgstr "Comment puis-je avoir une clé API Google ?"
+
+#: options.php:51
+#@ youtube-to-posts
+msgid "To use this plugin, you'll need to create a Google Youtube API key. Dealing with Google Developers Console can be a bit confusing, you need to : create a project, make the API data you need active and generate a public API key. Here's how to do that:"
+msgstr "Pour utiliser ce plugin, vous devez créer une clé d'API Youtube sur la console de développeur Google. Ça parait compliqué, mais ça ne l'est pas tant que ça, il faut : créer un projet, activer l'API \\\"YouTube Data API v3\\\" et générer ensuite une clé API. Voici comment faire, pas à pas :"
+
+#: options.php:56
+#@ youtube-to-posts
+msgid "Login to Google using your Google account."
+msgstr "Connectez-vous sur Google avec votre compte Google."
+
+#: options.php:58
+#@ youtube-to-posts
+msgid "Go to the <a target=\"_blank\" href=\"https://console.developers.google.com/project\">Developers Console > Projects</a>"
+msgstr "Allez sur <a target=\"_blank\" href=\"https://console.developers.google.com/project\">la console de développeurs > Projets</a>"
+
+#: options.php:59
+#@ youtube-to-posts
+msgid "Click on \"Create a project\" (you'll need to give it a title and an ID)"
+msgstr "Cliquez sur \"Créer un projet\" (il faudra lui donner un titre et un ID)"
+
+#: options.php:60
+#@ youtube-to-posts
+msgid "When your project his created, click on it on the project list"
+msgstr "Lorsque votre projet est créé, cliquez dessus dans la liste des projets"
+
+#: options.php:61
+#@ youtube-to-posts
+msgid "Go to the section API and authentication > API, and search for YouTube Data API v3, and click on the button on the right to make this API active."
+msgstr "Allez dans la section API et authentification > API et rechercher Youtube Data API v3, et activez la via le bouton à droite."
+
+#: options.php:62
+#@ youtube-to-posts
+msgid "Go to the Credentials section > Access to the public API anc click on the button \"Make a key\" > Server key"
+msgstr "Allez dans la section Identifiants > Ajouter des identifiants > Clé API > Clé serveur "
+
+#: options.php:63
+#@ youtube-to-posts
+msgid "On the next box, you'll need to tell on which domains you allow the use of your app (e.g. 127.0.0.1, www.mydomain.com, etc)."
+msgstr "Vous pouvez également renseigner des domaines sur lesquels l'utilisation de cette clé est autorisé (ex : 127.0.0.1, etc...)"
+
+#: options.php:64
+#@ youtube-to-posts
+msgid "Now it should have generated a API Key (e.g. AIzaFyD0aPCQjLFRbLnh4RKbVBlBgVCVSwjbFAg), copy-paste it on the box above."
+msgstr "En cliquant sur Créer, une popup s'ouvre avec votre clé API, vous n'avez plus qu'à la renseigner dans le champ en haut de cette page."
+
+#: options.php:65
+#@ youtube-to-posts
+msgid "It's done, congrats :)"
+msgstr "C'est fait, bien joué :)"
+
+#: options.php:29
+#, php-format
+#@ youtube-to-posts
+msgid "%title% is the title of the Youtube video"
+msgstr "%title% est le titre de la vidéo"
+
+#: options.php:30
+#, php-format
+#@ youtube-to-posts
+msgid "%description% is the description (500 chars max - Youtube restriction) of the Youtube video"
+msgstr "%description% est la description de la vidéo (500 caractères max., imposé par Youtube)"
+
+#: options.php:31
+#, php-format
+#@ youtube-to-posts
+msgid "%embed% will display the embed code of the video"
+msgstr "%embed% affichera le code embed de la vidéo"
+
+#: options.php:32
+#, php-format
+#@ youtube-to-posts
+msgid "%thumbnail% will display the thumbnail of the video"
+msgstr "%thumbnail% affiche la miniature (preview) de la vidéo"
+
+#: options.php:33
+#, php-format
+#@ youtube-to-posts
+msgid "%query% will display the query you typed"
+msgstr "%query% vous permet d'afficher la requête que vous avez tapé"
+
+#: options.php:34
+#, php-format
+#@ youtube-to-posts
+msgid "%user% will display the uploader of the video"
+msgstr "%user% affichera le nom d'utilisateur de la personne qui a uploadé la vidéo"
+
+#: options.php:35
+#, php-format
+#@ youtube-to-posts
+msgid "%date% will display the upload date of the video"
+msgstr "%date% affichera la date d'upload de la vidéo"
+
+#: options.php:40
+#, php-format
+#@ youtube-to-posts
+msgid "Default title is just %title%"
+msgstr "Par défaut, le titre correspond au titre de la vidéo (%title%)"
+
+#: options.php:41
+#: options.php:45
+#, php-format
+#@ youtube-to-posts
+msgid "e.g. Last Video of %user% - %title%"
+msgstr "ex :Dernière vidéo par %user% - %title%"
+
+#: options.php:44
+#, php-format
+#@ youtube-to-posts
+msgid "Default content is %embed%<br>%description%"
+msgstr "Par défaut : %embed%<br>%description%"
+
+#: admin.php:61
+#@ youtube-to-posts
+msgid "If you select a custom post type, be sure it supports Post Thumbnails."
+msgstr "Si vous sélectionnez un type de publication personnalisé, assurez-vous qu'il supporte les images à la une (Post Thumbnails)."
 
