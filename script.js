@@ -31,7 +31,15 @@ var ajaxGetYoutube = {
         if (message === "needUpdate") {
             msg = ajaxGetYoutube.trans.needUpdate;
         }
-        jQuery('#updateNotifs').html('<div class="updated" style="display: none;">' + msg + '</div>').find('.updated').fadeIn();
+        else if (message === "mediaAdded") {
+            msg = ajaxGetYoutube.trans.mediaAdded;
+        }
+        else if (message === "mediaRejected") {
+            msg = ajaxGetYoutube.trans.mediaRejected;
+        }
+        jQuery('.updated-custom p').html(msg).fadeIn(function() {
+            jQuery('.updated-custom').fadeOut();   
+        });
 
     },
     updateCategories: function(el) {
@@ -199,12 +207,12 @@ var ajaxGetYoutube = {
                 'query': ajaxGetYoutube.query,
                 'queryType': ajaxGetYoutube.queryType
             };
-            jQuery('.updated').html('Working...').fadeIn();
+            jQuery('.updated-custom p').html(ajaxGetYoutube.trans.loading).parent().fadeIn();
             jQuery.post(ajaxurl, data, function(response) {
 
                 if (response === 'ok') {
                     $that.parents('.result').fadeOut();
-                    jQuery('.updated').html('Media added !').fadeIn().fadeOut();
+                    ajaxGetYoutube.showAlert('mediaAdded');
                 }
             });
         });
@@ -226,11 +234,11 @@ var ajaxGetYoutube = {
                 'content': content,
                 'imgSrc': imgSrc
             };
-            jQuery('.updated').html('Working...').fadeIn();
+            jQuery('.updated-custom p').html(ajaxGetYoutube.trans.loading).parent().fadeIn();
             jQuery.post(ajaxurl, data, function(response) {
                 if (response === 'ok') {
                     $that.parents('.result').fadeOut();
-                    jQuery('.updated').html('Media rejected !').fadeIn().fadeOut();
+                    ajaxGetYoutube.showAlert('mediaRejected');
                 }
             }); // wp_insert_post();
         });

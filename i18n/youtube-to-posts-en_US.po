@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Youtube to Posts v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-11-04 13:46:41+0000\n"
+"PO-Revision-Date: 2015-11-07 12:22:18+0000\n"
 "Last-Translator: admin <enguerrandeep@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,127 +20,127 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: admin.php:8
+#: admin.php:7
 #@ youtube-to-posts
 msgid "Approve"
 msgstr ""
 
-#: admin.php:9
+#: admin.php:8
 #@ youtube-to-posts
 msgid "Deny"
 msgstr ""
 
-#: admin.php:10
+#: admin.php:9
 #@ youtube-to-posts
 msgid "You have changed the query parameters, remember to click on Save Changes to update the results."
 msgstr ""
 
-#: admin.php:11
+#: admin.php:10
 #@ youtube-to-posts
 msgid "There is an error with your API key, it has been rejected by Google API Service."
 msgstr ""
 
-#: admin.php:15
+#: admin.php:107
 #@ youtube-to-posts
 msgid "Media added !"
 msgstr ""
 
-#: admin.php:22
+#: admin.php:20
 #@ youtube-to-posts
 msgid "Youtube query options"
 msgstr ""
 
-#: admin.php:29
+#: admin.php:27
 #@ youtube-to-posts
 msgid "Query type:"
 msgstr ""
 
-#: admin.php:38
+#: admin.php:36
 #@ youtube-to-posts
 msgid "Query:"
 msgstr ""
 
-#: admin.php:39
+#: admin.php:37
 #@ youtube-to-posts
 msgid "Type your query."
 msgstr ""
 
-#: admin.php:40
+#: admin.php:38
 #@ youtube-to-posts
 msgid "If your query type is a playlist or a user, then you must type the relevant playlist / user ID."
 msgstr ""
 
-#: admin.php:44
+#: admin.php:42
 #@ youtube-to-posts
 msgid "Max results?"
 msgstr ""
 
-#: admin.php:45
+#: admin.php:43
 #@ youtube-to-posts
 msgid "Default value is 30"
 msgstr ""
 
-#: admin.php:49
+#: admin.php:47
 #@ youtube-to-posts
 msgid "Post type to feed:"
 msgstr ""
 
-#: admin.php:67
+#: admin.php:65
 #@ youtube-to-posts
 msgid "Taxonomy term to feed:"
 msgstr ""
 
-#: admin.php:86
+#: admin.php:82
 #@ youtube-to-posts
 msgid "Published:"
 msgstr ""
 
-#: admin.php:114
+#: admin.php:104
 #@ youtube-to-posts
 msgid "Results from Youtube for:"
 msgstr ""
 
-#: admin.php:115
+#: admin.php:105
 #@ youtube-to-posts
 msgid "Results are ordered by date, newest first."
 msgstr ""
 
-#: admin.php:117
+#: admin.php:110
 #@ youtube-to-posts
 msgid "Video preview"
 msgstr ""
 
-#: admin.php:118
+#: admin.php:111
 #@ youtube-to-posts
 msgid "Video title"
 msgstr ""
 
-#: admin.php:119
+#: admin.php:112
 #@ youtube-to-posts
 msgid "Video description"
 msgstr ""
 
-#: admin.php:120
+#: admin.php:113
 #@ youtube-to-posts
 msgid "Upload date"
 msgstr ""
 
-#: admin.php:121
+#: admin.php:114
 #@ youtube-to-posts
 msgid "Actions"
 msgstr ""
 
-#: admin.php:124
+#: admin.php:117
 #@ youtube-to-posts
 msgid "Getting the posts, please wait..."
 msgstr ""
 
-#: admin.php:127
+#: admin.php:120
 #@ youtube-to-posts
 msgid "Load more videos"
 msgstr ""
 
-#: admin.php:132
+#: admin.php:124
 #@ youtube-to-posts
 msgid "Your Youtube API access is not defined, go set it on the <a href=\"options-general.php?page=youtube-to-posts\">settings page</a>."
 msgstr ""
@@ -170,75 +170,14 @@ msgstr ""
 msgid "You can customize the way Youtube content will feed your posts with a template tag system. So:"
 msgstr ""
 
-#: options.php:29
-#, php-format
-#@ youtube-to-posts
-msgid "{%title%} is the title of the Youtube video"
-msgstr ""
-
-#: options.php:30
-#, php-format
-#@ youtube-to-posts
-msgid "{%description%} is the description (500 chars max - Youtube restriction) of the Youtube video"
-msgstr ""
-
-#: options.php:31
-#, php-format
-#@ youtube-to-posts
-msgid "{%embed%} will display the embed code of the video"
-msgstr ""
-
-#: options.php:32
-#, php-format
-#@ youtube-to-posts
-msgid "{%thumbnail%} will display the thumbnail of the video"
-msgstr ""
-
-#: options.php:33
-#, php-format
-#@ youtube-to-posts
-msgid "{%query%} will display the query you typed"
-msgstr ""
-
-#: options.php:34
-#, php-format
-#@ youtube-to-posts
-msgid "{%user%} will display the uploader of the video"
-msgstr ""
-
-#: options.php:35
-#, php-format
-#@ youtube-to-posts
-msgid "{%date%} will display the upload date of the video"
-msgstr ""
-
 #: options.php:40
 #@ youtube-to-posts
 msgid "Title format of your videos:"
 msgstr ""
 
-#: options.php:40
-#, php-format
-#@ youtube-to-posts
-msgid "Default title is just {%title%}"
-msgstr ""
-
-#: options.php:41
-#: options.php:45
-#, php-format
-#@ youtube-to-posts
-msgid "e.g. Last Video of {%user%} - {%title%}"
-msgstr ""
-
 #: options.php:44
 #@ youtube-to-posts
 msgid "Content format of your videos:"
-msgstr ""
-
-#: options.php:44
-#, php-format
-#@ youtube-to-posts
-msgid "Default content is {%embed%}<br>{%description%}"
 msgstr ""
 
 #: options.php:49
@@ -306,5 +245,86 @@ msgstr ""
 #: youtube-to-posts.php:350
 #@ default
 msgid "Y2P rejects"
+msgstr ""
+
+#: admin.php:11
+#@ youtube-to-posts
+msgid "Loading..."
+msgstr ""
+
+#: admin.php:12
+#@ youtube-to-posts
+msgid "Video added !"
+msgstr ""
+
+#: admin.php:13
+#@ youtube-to-posts
+msgid "Video rejected !"
+msgstr ""
+
+#: admin.php:62
+#@ youtube-to-posts
+msgid "If you select a custom post type, be sure it supports Post Thumbnails."
+msgstr ""
+
+#: options.php:29
+#, php-format
+#@ youtube-to-posts
+msgid "%title% is the title of the Youtube video"
+msgstr ""
+
+#: options.php:30
+#, php-format
+#@ youtube-to-posts
+msgid "%description% is the description (500 chars max - Youtube restriction) of the Youtube video"
+msgstr ""
+
+#: options.php:31
+#, php-format
+#@ youtube-to-posts
+msgid "%embed% will display the embed code of the video"
+msgstr ""
+
+#: options.php:32
+#, php-format
+#@ youtube-to-posts
+msgid "%thumbnail% will display the thumbnail of the video"
+msgstr ""
+
+#: options.php:33
+#, php-format
+#@ youtube-to-posts
+msgid "%query% will display the query you typed"
+msgstr ""
+
+#: options.php:34
+#, php-format
+#@ youtube-to-posts
+msgid "%user% will display the uploader of the video"
+msgstr ""
+
+#: options.php:35
+#, php-format
+#@ youtube-to-posts
+msgid "%date% will display the upload date of the video"
+msgstr ""
+
+#: options.php:40
+#, php-format
+#@ youtube-to-posts
+msgid "Default title is just %title%"
+msgstr ""
+
+#: options.php:41
+#: options.php:45
+#, php-format
+#@ youtube-to-posts
+msgid "e.g. Last Video of %user% - %title%"
+msgstr ""
+
+#: options.php:44
+#, php-format
+#@ youtube-to-posts
+msgid "Default content is %embed%<br>%description%"
 msgstr ""
 

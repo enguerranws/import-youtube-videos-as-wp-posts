@@ -8,10 +8,11 @@
   ajaxGetYoutube.trans.deny = '<?php _e('Deny', 'youtube-to-posts') ?>';
   ajaxGetYoutube.trans.needUpdate = '<?php _e('You have changed the query parameters, remember to click on Save Changes to update the results.', 'youtube-to-posts') ?>';
   ajaxGetYoutube.trans.apiWrong = '<?php _e('There is an error with your API key, it has been rejected by Google API Service.', 'youtube-to-posts') ?>';
+  ajaxGetYoutube.trans.loading = '<?php _e('Loading...', 'youtube-to-posts') ?>';
+  ajaxGetYoutube.trans.mediaAdded = '<?php _e('Video added !', 'youtube-to-posts') ?>';
+  ajaxGetYoutube.trans.mediaRejected = '<?php _e('Video rejected !', 'youtube-to-posts') ?>';
 </script>
-<div class="updated">
-  <p><?php _e('Media added !', 'youtube-to-posts') ?></p>
-</div>
+
 <div class="wrap">
   <h2 class="align-center"><img src="<?php echo plugins_url('', __FILE__); ?>/img/logo-t2p.png"></h2>
   
@@ -102,6 +103,9 @@
   </form>
   <h3><?php _e('Results from Youtube for:', 'youtube-to-posts') ?> "<?php echo get_option( 'yt_to_posts_query', '' ) ?>"</h3>
   <p class="description"><?php _e('Results are ordered by date, newest first.', 'youtube-to-posts') ?></p>
+  <div class="updated updated-custom">
+    <p><?php _e('Media added !', 'youtube-to-posts') ?></p>
+  </div>
   <div id="headResults">
     <div class="manage-column column-image"><strong><?php _e('Video preview', 'youtube-to-posts') ?></strong></div>
     <div class="manage-column column-auteur"><strong><?php _e('Video title', 'youtube-to-posts') ?></strong></div>

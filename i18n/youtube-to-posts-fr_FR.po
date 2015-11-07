@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Youtube to Posts v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-11-04 14:22:00+0000\n"
+"PO-Revision-Date: 2015-11-07 12:23:34+0000\n"
 "Last-Translator: admin <enguerrandeep@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -32,72 +32,72 @@ msgstr "Youtube to Posts"
 msgid "Y2P rejects"
 msgstr "Y2P rejects"
 
-#: admin.php:13
+#: admin.php:107
 #@ youtube-to-posts
 msgid "Media added !"
 msgstr "Vidéo ajoutée !"
 
-#: admin.php:19
+#: admin.php:20
 #@ youtube-to-posts
 msgid "Youtube query options"
 msgstr "Options de requête vers Youtube"
 
-#: admin.php:35
+#: admin.php:36
 #@ youtube-to-posts
 msgid "Query:"
 msgstr "Requête :"
 
-#: admin.php:41
+#: admin.php:42
 #@ youtube-to-posts
 msgid "Max results?"
 msgstr "Nombre de résultats maximum&nbsp;?"
 
-#: admin.php:42
+#: admin.php:43
 #@ youtube-to-posts
 msgid "Default value is 30"
 msgstr "La valeur par défaut est de 30"
 
-#: admin.php:46
+#: admin.php:47
 #@ youtube-to-posts
 msgid "Post type to feed:"
 msgstr "Type de post à alimenter :"
 
-#: admin.php:103
+#: admin.php:104
 #@ youtube-to-posts
 msgid "Results from Youtube for:"
 msgstr "Résultats récupérés depuis Youtube pour la requête :"
 
-#: admin.php:113
+#: admin.php:117
 #@ youtube-to-posts
 msgid "Getting the posts, please wait..."
 msgstr "Chargement des vidéos, veuillez patienter..."
 
-#: admin.php:116
+#: admin.php:120
 #@ youtube-to-posts
 msgid "Load more videos"
 msgstr "Charger plus de vidéos"
 
-#: admin.php:106
+#: admin.php:110
 #@ youtube-to-posts
 msgid "Video preview"
 msgstr "Miniature"
 
-#: admin.php:107
+#: admin.php:111
 #@ youtube-to-posts
 msgid "Video title"
 msgstr "Titre de la vidéo"
 
-#: admin.php:108
+#: admin.php:112
 #@ youtube-to-posts
 msgid "Video description"
 msgstr "Description de la vidéo"
 
-#: admin.php:109
+#: admin.php:113
 #@ youtube-to-posts
 msgid "Upload date"
 msgstr "Date d'upload"
 
-#: admin.php:110
+#: admin.php:114
 #@ youtube-to-posts
 msgid "Actions"
 msgstr "Actions"
@@ -137,37 +137,37 @@ msgstr "Vous avez changé les paramètres de votre requête, n\\'oubliez pas de 
 msgid "There is an error with your API key, it has been rejected by Google API Service."
 msgstr "Il semble y avoir une erreur avec votre configuration (clé API Google, ID playlist ou de chaîne Youtube), veuillez vérifier ces paramètres."
 
-#: admin.php:26
+#: admin.php:27
 #@ youtube-to-posts
 msgid "Query type:"
 msgstr "Type de requête :"
 
-#: admin.php:36
+#: admin.php:37
 #@ youtube-to-posts
 msgid "Type your query."
 msgstr "Tapez votre requête."
 
-#: admin.php:37
+#: admin.php:38
 #@ youtube-to-posts
 msgid "If your query type is a playlist or a user, then you must type the relevant playlist / user ID."
 msgstr "Si votre requête correspond à une playlist ou une chaîne Youtube, vous devez renseigner l'ID de celle-ci."
 
-#: admin.php:64
+#: admin.php:65
 #@ youtube-to-posts
 msgid "Taxonomy term to feed:"
 msgstr "Terme de taxonomie à remplir :"
 
-#: admin.php:81
+#: admin.php:82
 #@ youtube-to-posts
 msgid "Published:"
 msgstr "Publié:"
 
-#: admin.php:104
+#: admin.php:105
 #@ youtube-to-posts
 msgid "Results are ordered by date, newest first."
 msgstr "Les résultats sont rangés par date, les plus récents en premier."
 
-#: admin.php:120
+#: admin.php:124
 #@ youtube-to-posts
 msgid "Your Youtube API access is not defined, go set it on the <a href=\"options-general.php?page=youtube-to-posts\">settings page</a>."
 msgstr "Vous n'avez pas renseigné de clé d'API Youtube, renseignez-là sur <a href=\"options-general.php?page=youtube-to-posts\">la page d'options</a>."
@@ -308,8 +308,23 @@ msgstr "ex :Dernière vidéo par %user% - %title%"
 msgid "Default content is %embed%<br>%description%"
 msgstr "Par défaut : %embed%<br>%description%"
 
-#: admin.php:61
+#: admin.php:62
 #@ youtube-to-posts
 msgid "If you select a custom post type, be sure it supports Post Thumbnails."
 msgstr "Si vous sélectionnez un type de publication personnalisé, assurez-vous qu'il supporte les images à la une (Post Thumbnails)."
+
+#: admin.php:11
+#@ youtube-to-posts
+msgid "Loading..."
+msgstr "Chargement..."
+
+#: admin.php:12
+#@ youtube-to-posts
+msgid "Video added !"
+msgstr "Vidéo ajoutée !"
+
+#: admin.php:13
+#@ youtube-to-posts
+msgid "Video rejected !"
+msgstr "Vidéo supprimée !"
 
