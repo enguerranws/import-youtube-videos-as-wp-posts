@@ -58,7 +58,7 @@ This section describes how to install the plugin and get it working.
 
 ## Frequently Asked Questions
 
-=How can I get a Google API key?=
+### How can I get a Google API key?
 
 To use this plugin, you'll need to create a Google Youtube API key. Dealing with Google Developers Console can be a bit confusing, you need to : create a project, make the API data you need active and generate a public API key. Here's how to do that:
 1. Login to Google using your Google account.
@@ -71,10 +71,10 @@ Click on "Create a project" (you'll need to give it a title and an ID)
 7. Now it should have generated a API Key (e.g. AIzaFyD0aPCQjLFRbLnh4RKbVBlBgVCVSwjbFAg), copy-paste it on the box above.
 8. It's done, congrats :)
 
-=I got the message : 'Your Youtube API access is not defined, go set it on the settings page.' =
+### I got the message : 'Your Youtube API access is not defined, go set it on the settings page.'
 It's because you didn't fill the API key field (in the settings page) with your Google API key.
 
-=I got the message : 'There is an error with your API key, it has been rejected by Google API Service.' =
+### I got the message : 'There is an error with your API key, it has been rejected by Google API Service.'
 This is mostly because you made a mistake typing / copying your API key. Check the API key field in the Settings page.
 
 
