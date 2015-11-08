@@ -1,16 +1,8 @@
-=== Plugin Name ===
-Contributors: enguerranws
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BQNTS4S2PEQVN
-Tags: youtube, content, videos, enguerranws, google api, youtube api
-Requires at least: 3.0.1
-Tested up to: 3.0.1
-Stable tag: 4.3
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+# Youtube to Posts Wordpress plugin
 
 Youtube to Posts lets you search for Youtube videos and add them quickly to your Wordpress website.
 
-== Description ==
+## Description
 
 English
 _________________________
