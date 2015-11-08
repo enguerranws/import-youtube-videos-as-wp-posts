@@ -3,7 +3,7 @@
 /*
   Plugin Name: Youtube to Posts
   Plugin URI: http://www.enguerranweiss.fr
-  Description: Get a video list from a request to Youtube (free query) and add their content to your own Wordpress :)
+  Description: Get a video list from a request to Youtube (free query, playlist ID, channel ID) and add their content to your own Wordpress :)
   Version: 1.0
   Author: Enguerran Weiss
   Author URI: http://www.enguerranweiss.fr
