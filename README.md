@@ -4,15 +4,17 @@ Youtube to Posts lets you search for Youtube videos and add them quickly to your
 
 ## Description
 
+_________________________
+
 English
 _________________________
 
 **Youtube to Posts** is a simple plugin that allow you to search Youtube videos from the admin panel (with keywords, channel or playlist ID) and add the videos you pick to your posts.
 
 It's a simple way :
-• to **feed your WordPress website with real content in minutes**
-• to **display curated content from Youtube** on your website
-• to **link a playlist or a channel to your website**
+* to **feed your WordPress website with real content in minutes**
+* to **display curated content from Youtube** on your website
+* to **link a playlist or a channel to your website**
 
 How does it work ?
 1. Type a request : keywords, channel ID or playlist ID
@@ -22,7 +24,9 @@ How does it work ?
 
 **Works on every themes** : it just feed an existing ressource (e.g. : Posts) with selected Youtube content.
 
-Available in French and English.
+*Available in French and English.*
+
+_________________________
 
 Français
 _________________________
@@ -30,9 +34,9 @@ _________________________
 **Youtube to Posts** est un plugin tout simple qui permet de **chercher des vidéos Youtube depuis l'administration** de WordPress et de **les ajouter à son site rapidement**.
 
 Quelques utilisations :
-• **alimenter un site en quelques minutes avec du vrai contenu** venant de Youtube
-• **afficher un contenu choisi sur son site**
-• **faire le lien entre une playlist ou une chaîne Youtube**
+* **alimenter un site en quelques minutes avec du vrai contenu** venant de Youtube
+* **afficher un contenu choisi sur son site**
+* **faire le lien entre une playlist ou une chaîne Youtube**
 
 Comment ça marche ?
 1. Tapez une requête : mots-clé, ID de playlist, ID de chaîne
