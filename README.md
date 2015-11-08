@@ -46,7 +46,7 @@ Comment ça marche ?
 
 **Ça fonctionne avec tous les thèmes** : le plugin ajoute les vidéos choisies à un type de ressources existant (ex: Articles).
 
-== Installation ==
+## Installation
 
 This section describes how to install the plugin and get it working.
 
@@ -56,9 +56,7 @@ This section describes how to install the plugin and get it working.
 4. Search for Youtube content and add it to your Wordpress from the 'Youtube to Posts' menu
 
 
-== Screenshots ==
-
-== Frequently Asked Questions ==
+## Frequently Asked Questions
 
 =How can I get a Google API key?=
 
@@ -80,7 +78,7 @@ It's because you didn't fill the API key field (in the settings page) with your 
 This is mostly because you made a mistake typing / copying your API key. Check the API key field in the Settings page.
 
 
-== Changelog ==
+# Changelog
 
-= 1.0 =
+### 1.0
 * Plugin init
