@@ -1,6 +1,6 @@
-# Youtube to Posts Wordpress plugin
+# Import YouTube videos as WP Posts
 
-Youtube to Posts lets you search for Youtube videos and add them quickly to your Wordpress website.
+Import YouTube videos as WP Posts lets you search for Youtube videos and add them quickly to your Wordpress website.
 
 ## Description
 
@@ -9,7 +9,7 @@ _________________________
 English
 _________________________
 
-**Youtube to Posts** is a simple plugin that allow you to search Youtube videos from the admin panel (with keywords, channel or playlist ID) and add the videos you pick to your posts.
+**Import YouTube videos as WP Posts**
 
 It's a simple way :
 * to **feed your WordPress website with real content in minutes**
@@ -31,7 +31,7 @@ _________________________
 Français
 _________________________
 
-**Youtube to Posts** est un plugin tout simple qui permet de **chercher des vidéos Youtube depuis l'administration** de WordPress et de **les ajouter à son site rapidement**.
+**Import YouTube videos as WP Posts** est un plugin tout simple qui permet de **chercher des vidéos Youtube depuis l'administration** de WordPress et de **les ajouter à son site rapidement**.
 
 Quelques utilisations :
 * **alimenter un site en quelques minutes avec du vrai contenu** venant de Youtube
@@ -53,7 +53,7 @@ This section describes how to install the plugin and get it working.
 1. Upload `/youtube-to-posts/` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Set up your Google API key in the Settings page
-4. Search for Youtube content and add it to your Wordpress from the 'Youtube to Posts' menu
+4. Search for Youtube content and add it to your Wordpress from the 'Import YouTube videos as WP Posts' menu
 
 
 ## Frequently Asked Questions

@@ -1,21 +1,21 @@
 === Plugin Name ===
 Contributors: enguerranws
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BQNTS4S2PEQVN
-Tags: youtube, content, videos, enguerranws, google api, youtube api
+Tags: youtube, content, videos, enguerranws, google api, youtube api, youtube importer, video importer
 Requires at least: 3.0.1
 Tested up to: 3.0.1
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Youtube to Posts lets you search for Youtube videos and add them quickly to your Wordpress website.
+Import YouTube videos as WP Posts lets you search for Youtube videos and add them quickly to your Wordpress website.
 
 == Description ==
 
 English
 _________________________
 
-**Youtube to Posts** is a simple plugin that allow you to search Youtube videos from the admin panel (with keywords, channel or playlist ID) and add the videos you pick to your posts.
+**Import YouTube videos as WP Posts** is a simple plugin that allow you to search Youtube videos from the admin panel (with keywords, channel or playlist ID) and add the videos you pick to your posts.
 
 It's a simple way :
 • to **feed your WordPress website with real content in minutes**
@@ -35,7 +35,7 @@ Available in French and English.
 Français
 _________________________
 
-**Youtube to Posts** est un plugin tout simple qui permet de **chercher des vidéos Youtube depuis l'administration** de WordPress et de **les ajouter à son site rapidement**.
+**Import YouTube videos as WP Posts** est un plugin tout simple qui permet de **chercher des vidéos Youtube depuis l'administration** de WordPress et de **les ajouter à son site rapidement**.
 
 Quelques utilisations :
 • **alimenter un site en quelques minutes avec du vrai contenu** venant de Youtube
@@ -57,7 +57,7 @@ This section describes how to install the plugin and get it working.
 1. Upload `/youtube-to-posts/` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Set up your Google API key in the Settings page
-4. Search for Youtube content and add it to your Wordpress from the 'Youtube to Posts' menu
+4. Search for Youtube content and add it to your Wordpress from the 'Import YouTube videos as WP Posts' menu
 
 
 == Screenshots ==
@@ -66,7 +66,7 @@ This section describes how to install the plugin and get it working.
 
 =How can I get a Google API key?=
 
-To use this plugin, you'll need to create a Google Youtube API key. Dealing with Google Developers Console can be a bit confusing, you need to : create a project, make the API data you need active and generate a public API key. Here's how to do that:
+To use this plugin, **you'll need to create a Google Youtube API key**. Dealing with Google Developers Console can be a bit confusing, you need to : create a project, make the API data you need active and generate a public API key. Here's how to do that:
 1. Login to Google using your Google account.
 2. Go to the Developers Console > Projects
 Click on "Create a project" (you'll need to give it a title and an ID)

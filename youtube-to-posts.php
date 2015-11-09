@@ -1,7 +1,7 @@
 <?php
 
 /*
-  Plugin Name: Youtube to Posts
+  Plugin Name: Import YouTube videos as WP Posts
   Plugin URI: http://www.enguerranweiss.fr
   Description: Get a video list from a request to Youtube (free query, playlist ID, channel ID) and add their content to your own Wordpress :)
   Version: 1.0
