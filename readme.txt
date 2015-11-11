@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: youtube, content, videos, enguerranws, google api, youtube api, youtube importer, video importer
 Requires at least: 3.0.1
 Tested up to: 3.0.1
-Stable tag: 4.3
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,13 +54,16 @@ Comment ça marche ?
 
 This section describes how to install the plugin and get it working.
 
-1. Upload `/youtube-to-posts/` folder to the `/wp-content/plugins/` directory
+1. Upload `/import-youtube-videos-as-wp-post/` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Set up your Google API key in the Settings page
 4. Search for Youtube content and add it to your Wordpress from the 'Import YouTube videos as WP Posts' menu
 
 
 == Screenshots ==
+1. Admin interface to search and add Youtube videos as WP posts
+2. Admin settings for the plugin (Settings > )
+
 
 == Frequently Asked Questions ==
 

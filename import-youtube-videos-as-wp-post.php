@@ -260,8 +260,8 @@ function yt_to_posts_feed_init() {
 function yt_to_posts_feed_menu() {
    
     $page = add_menu_page(
-            __('Youtube to Posts', 'yt_to_posts'), // The Menu Title
-            __('Youtube to Posts', 'yt_to_posts'), // The Page title
+            __('Youtube importer', 'yt_to_posts'), // The Menu Title
+            __('Youtube importer', 'yt_to_posts'), // The Page title
             'manage_options', // The capability required for access to this item
             'yt_to_posts_feed', // the slug to use for the page in the URL
             'yt_to_posts_feed_admin',  // The function to call to render the page
@@ -315,7 +315,7 @@ function yt_to_posts_api_call(){
 
 
 function yt_to_posts_options_page() {
-  add_options_page('Youtube to Posts', 'Youtube to Posts', 'manage_options', 'yt-to-posts', 'yt_to_posts_options_page_render');
+  add_options_page('Youtube importer', 'Youtube importer', 'manage_options', 'yt-to-posts', 'yt_to_posts_options_page_render');
   wp_enqueue_style('style', plugins_url('/styles.css', __FILE__));
   
 }
