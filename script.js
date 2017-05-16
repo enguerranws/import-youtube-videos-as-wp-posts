@@ -1,5 +1,4 @@
 jQuery(document).ready(function() {
-
     ajaxGetYoutube.init(ajaxGetYoutube.query);
     jQuery('#updateCatOnChange').on('change', function() {
         ajaxGetYoutube.updateCategories('#updateCatOnChange');
@@ -21,10 +20,11 @@ var ajaxGetYoutube = {
         ajaxGetYoutube.checkForChange();
     },
     checkForChange: function() {
-        jQuery('#queryOptions').find('input, select').on('change', function() {
-            ajaxGetYoutube.queryFormChanged = true;
-            ajaxGetYoutube.showAlert('needUpdate');
-        });
+        // jQuery('#queryOptions').find('input, select').on('change', function() {
+        //     console.log(ajaxGetYoutube);
+        //     ajaxGetYoutube.queryFormChanged = true;
+        //     ajaxGetYoutube.showAlert('needUpdate');
+        // });
     },
     showAlert: function(message) {
         var msg;
@@ -38,7 +38,7 @@ var ajaxGetYoutube = {
             msg = ajaxGetYoutube.trans.mediaRejected;
         }
         jQuery('.updated-custom p').html(msg).fadeIn(function() {
-            jQuery('.updated-custom').fadeOut();   
+            jQuery('.updated-custom').fadeOut();
         });
 
     },
@@ -48,9 +48,7 @@ var ajaxGetYoutube = {
             'action': 'yt_to_posts_getPostTypeCats',
             'post_type': type
         };
-
         jQuery.post(ajaxurl, data, function(response) {
-
             if (response === "empty") {
                 jQuery('#catsSelect').addClass('hidden');
             } else {
@@ -58,10 +56,9 @@ var ajaxGetYoutube = {
                 jQuery('#catsSelect select').html(function() {
                     var html = "";
                     response = JSON.parse(response);
-
                     for (var i = 0; i < response.length; i++) {
-                        if (ajaxGetYoutube.currentCat === response[i].id) {
-                            html += '<option selected value="' + response[i].id + '" >' + response[i].name + '</option>';
+                        if (parseInt(ajaxGetYoutube.currentCat) === response[i].id) {
+                            html += '<option selected class="selected" value="' + response[i].id + '" >' + response[i].name + '</option>';
                         } else {
                             html += '<option value="' + response[i].id + '" >' + response[i].name + '</option>';
                         }
@@ -98,7 +95,7 @@ var ajaxGetYoutube = {
         var args = {
             action: 'yt_to_posts_api_call',
             query: tag,
-            maxNb: ajaxGetYoutube.number
+            maxNb: ajaxGetYoutube.number > 0 ? ajaxGetYoutube.number : 30
 
         };
         if (ajaxGetYoutube.queryType === 'playlist' && ajaxGetYoutube.nbPage === 0) {
@@ -136,8 +133,6 @@ var ajaxGetYoutube = {
 
             var that = jQuery(lastContainer);
             var $this;
-
-
             if (data) {
                 var html = '';
                 ajaxGetYoutube.nextPageToken = data.nextPageToken;
@@ -155,8 +150,8 @@ var ajaxGetYoutube = {
 
 
                     if (ids.indexOf(data.items[i].id) === -1) {
-                        
-                        html += '<li class="result" data-id="' + data.items[i].id + '"><div class="thumb"><a href="' + data.items[i].id + '" target="_blank" ><img src="' + data.items[i].thumb_url + '" /></a></div><div>' + data.items[i].title + '</div><div class="content">' + data.items[i].description + '</div><div class="date">' + data.items[i].date + '</div><div class="buttons"><a data-id="' + data.items[i].id + '" data-src="' + data.items[i].media_url + '"  data-content="' + data.items[i].description + '" data-title= "' + data.items[i].title + '" class="btn-deny button button-secondary" href="#">' + ajaxGetYoutube.trans.deny + '</a><a data-title= "' + data.items[i].title + '" data-id="' + data.items[i].id + '" data-src="' + data.items[i].media_url + '" data-content="' + data.items[i].description + '" data-date="' + data.items[i].date + '" data-embed-url="' + data.items[i].embed_url + '" data-media-url="' + data.items[i].media_url + '" data-thumbnail-url="' + data.items[i].thumb_url + '" data-user="' + data.items[i].channel_title + '" class="btn-approve button button-primary" href="#">' + ajaxGetYoutube.trans.approve + '</a></div></li>';
+
+                        html += '<li class="result" data-id="' + data.items[i].id + '"><div class="thumb"><a href="' + data.items[i].media_url + '" target="_blank" ><img src="' + data.items[i].thumb_url + '" /></a></div><div>' + data.items[i].title + '</div><div class="content">' + data.items[i].description + '</div><div class="date">' + data.items[i].date + '</div><div class="buttons"><a data-id="' + data.items[i].id + '" data-src="' + data.items[i].media_url + '"  data-content="' + data.items[i].description + '" data-title= "' + data.items[i].title + '" class="btn-deny button button-secondary" href="#">' + ajaxGetYoutube.trans.deny + '</a><a data-title= "' + data.items[i].title + '" data-id="' + data.items[i].id + '" data-src="' + data.items[i].media_url + '" data-content="' + data.items[i].description + '" data-date="' + data.items[i].date + '" data-embed-url="' + data.items[i].embed_url + '" data-media-url="' + data.items[i].media_url + '" data-thumbnail-url="' + data.items[i].thumb_url + '" data-user="' + data.items[i].channel_title + '" class="btn-approve button button-primary" href="#">' + ajaxGetYoutube.trans.approve + '</a></div></li>';
 
                     }
 
@@ -175,7 +170,7 @@ var ajaxGetYoutube = {
             }
 
         }).error(function(err) {
-
+            console.log(err);
             alert(ajaxGetYoutube.trans.apiWrong);
         });
 

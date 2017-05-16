@@ -4,7 +4,7 @@
   Plugin Name: Import YouTube videos as WP Posts
   Plugin URI: http://www.enguerranweiss.fr
   Description: Get a video list from a request to Youtube (free query, playlist ID, channel ID) and add their content to your own Wordpress :)
-  Version: 1.0
+  Version: 1.8
   Author: Enguerran Weiss
   Author URI: http://www.enguerranweiss.fr
  */
@@ -61,7 +61,7 @@ function yt_to_posts_getAllPostSlug() { // Returns an array of all Youtube ID (t
     if($post->yt_id != ""){
       $ids[] = $post->yt_id;
     }
-      
+
   }
   echo json_encode($ids);
   die();
@@ -71,8 +71,8 @@ function yt_to_posts_getPostTypeCats() { // Returns an array of all Youtube ID (
   $type = $_POST['post_type'];
   $taxs = get_object_taxonomies($type);
   $results = array();
-  
-  
+
+
   if(empty($taxs)){
     echo 'empty';
   }
@@ -83,24 +83,24 @@ function yt_to_posts_getPostTypeCats() { // Returns an array of all Youtube ID (
       }
       else {
         $args = array(
-            'orderby'           => 'name', 
+            'orderby'           => 'name',
             'order'             => 'ASC',
-            'hide_empty'        => false, 
-            'exclude'           => array(), 
-            'exclude_tree'      => array(), 
+            'hide_empty'        => false,
+            'exclude'           => array(),
+            'exclude_tree'      => array(),
             'include'           => array(),
-            'number'            => '', 
-            'fields'            => 'all', 
+            'number'            => '',
+            'fields'            => 'all',
             'slug'              => '',
             'parent'            => '',
-            'hierarchical'      => true, 
-            'child_of'          => 0, 
-            'get'               => '', 
+            'hierarchical'      => true,
+            'child_of'          => 0,
+            'get'               => '',
             'name__like'        => '',
             'description__like' => '',
-            'pad_counts'        => false, 
-            'offset'            => '', 
-            'search'            => '', 
+            'pad_counts'        => false,
+            'offset'            => '',
+            'search'            => '',
             'cache_domain'      => 'core'
         );
         $tax_terms = get_terms($tax, $args);
@@ -111,13 +111,13 @@ function yt_to_posts_getPostTypeCats() { // Returns an array of all Youtube ID (
             $object->id = $tax_term->term_id;
             $object->name = $tax_term->name;
             $results[] = $object;
-            
+
           }
-          
+
         }
       }
-      
-      
+
+
     }
     $results = json_encode($results);
       echo $results;
@@ -127,14 +127,14 @@ function yt_to_posts_getPostTypeCats() { // Returns an array of all Youtube ID (
 
 
 function yt_check_api_settings() { // Check if Youtube API settings are filled
-  
+
   if(get_option('yt_to_posts_ck') === ''){
     return false;
   }
   else {
     return true;
   }
- 
+
 }
 
 function yt_to_posts_insertPost(){ // Setting and calling wp_insert_post();
@@ -152,34 +152,32 @@ function yt_to_posts_insertPost(){ // Setting and calling wp_insert_post();
     $title_template = get_option('yt_to_posts_title_format');
     $content_template = get_option('yt_to_posts_content_format');
     $date = $_POST['date'];
-    $embed = '<iframe class="youtube-player" type="text/html" width="100%" height="400" src="http://www.youtube.com/embed/'. $id .'" allowfullscreen frameborder="0">
-</iframe>';
-    $content = '<iframe class="youtube-player" type="text/html" width="100%" height="400" src="http://www.youtube.com/embed/'. $id .'" allowfullscreen frameborder="0">
-</iframe><br>'. $description;
+    $embed = '[embed]'.$_POST['mediaUrl'].'[/embed]';
+    $content = $embed . ' <br> '. $description;
     $templateVals = array($title, $content, $embed, $imgSrc, $query, $user, $date );
     //var_dump($content, $embed, $imgSrc, $query, $author, $date);
-    // If template selected, construct the title 
+    // If template selected, construct the title
     if($title_template !== ''){
-        
-       
+
+
         $customTitle = preg_replace( $replacers, $templateVals, $title_template);
-        
+
         $title = $customTitle;
-       
-      
-      
+
+
+
     }
      if($content_template !== ''){
-        
-        
+
+
         $customContent = preg_replace($replacers, $templateVals, $content_template);
         $content = $customContent;
-        
-     
-      
-      
+
+
+
+
     }
-    
+
     // Creating new post
     $my_post = array(
       'post_title'    => $title,
@@ -195,10 +193,10 @@ function yt_to_posts_insertPost(){ // Setting and calling wp_insert_post();
     // updating post meta
     // if a media is detected, add its source url
     if($imgSrc){
-      add_post_meta( $post_ID, 'media_url', $imgSrc, true ) || update_post_meta( $post_ID, 'media_url', $imgSrc ); 
+      add_post_meta( $post_ID, 'media_url', $imgSrc, true ) || update_post_meta( $post_ID, 'media_url', $imgSrc );
     }
     add_post_meta( $post_ID, 'yt_id', $id, true );
-    // Create and upload thumbnail 
+    // Create and upload thumbnail
     $upload_dir = wp_upload_dir();
     $image_data = file_get_contents($imgSrc);
     $filename = $id.basename($imgSrc);
@@ -221,17 +219,17 @@ function yt_to_posts_insertPost(){ // Setting and calling wp_insert_post();
     wp_update_attachment_metadata( $attach_id, $attach_data );
 
     set_post_thumbnail( $post_ID, $attach_id );
- 
+
     echo 'ok';
     die();
 }
 function yt_to_posts_rejectPost(){ // Reject post : insert
-    
+
     $title = $_POST['title'];
     $content = $_POST['content'];
     $id = $_POST['id'];
     $author = $_POST['author'];
-   
+
 
 
     $my_post = array(
@@ -245,20 +243,20 @@ function yt_to_posts_rejectPost(){ // Reject post : insert
     );
 
     wp_insert_post($my_post);
-    
+
     echo 'ok';
     die();
 }
 
 function yt_to_posts_feed_init() {
-    
+
   load_plugin_textdomain('youtube-to-posts', false, basename( dirname( __FILE__ ) ) . '/i18n' );
 }
 
 
 
 function yt_to_posts_feed_menu() {
-   
+
     $page = add_menu_page(
             __('Youtube importer', 'yt_to_posts'), // The Menu Title
             __('Youtube importer', 'yt_to_posts'), // The Page title
@@ -288,12 +286,12 @@ function yt_to_posts_feed_styles() {
   ---------------------------------------------------------------------------- */
 
 function yt_to_posts_feed_admin() {
-    
+
     wp_enqueue_script('yt_to_posts_feed_script', plugins_url('/script.js', __FILE__));
     wp_register_script('yt_to_posts_feed_script', plugins_url('/script.js', __FILE__), 'jquery');
 
     require_once(dirname(__FILE__) . '/admin.php');
-     
+
 }
 
 
@@ -317,7 +315,7 @@ function yt_to_posts_api_call(){
 function yt_to_posts_options_page() {
   add_options_page('Youtube importer', 'Youtube importer', 'manage_options', 'yt-to-posts', 'yt_to_posts_options_page_render');
   wp_enqueue_style('style', plugins_url('/styles.css', __FILE__));
-  
+
 }
 function yt_to_posts_options_page_render(){
   require_once(dirname(__FILE__) . '/options.php');
@@ -325,13 +323,15 @@ function yt_to_posts_options_page_render(){
 }
 
 function yt_to_posts_register_options() { //register our settings
-  
+
   register_setting( 'yt_to_posts-query-settings-group', 'yt_to_posts_query' );
   register_setting( 'yt_to_posts-query-settings-group', 'yt_to_posts_post_type' );
   register_setting( 'yt_to_posts-query-settings-group', 'yt_to_posts_cat' );
   register_setting( 'yt_to_posts-query-settings-group', 'yt_to_posts_author' );
   register_setting( 'yt_to_posts-query-settings-group', 'yt_to_posts_query_type' );
-  
+  register_setting( 'yt_to_posts-query-settings-group', 'yt_to_posts_number' );
+
+
   register_setting( 'yt_to_posts-admin-settings-group', 'yt_to_posts_ck' );
   register_setting( 'yt_to_posts-admin-settings-group', 'yt_to_posts_title_format' );
   register_setting( 'yt_to_posts-admin-settings-group', 'yt_to_posts_content_format' );
@@ -339,7 +339,7 @@ function yt_to_posts_register_options() { //register our settings
 
 
 /* -----------------------------------------------------------------------------
- *  Register private post type for rejects 
+ *  Register private post type for rejects
   ---------------------------------------------------------------------------- */
 
 function create_y2p_pt_rejects() {
@@ -354,4 +354,3 @@ function create_y2p_pt_rejects() {
     )
   );
 }
-

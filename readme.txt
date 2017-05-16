@@ -3,8 +3,9 @@ Contributors: enguerranws
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BQNTS4S2PEQVN
 Tags: youtube, content, videos, enguerranws, google api, youtube api, youtube importer, video importer
 Requires at least: 3.0.1
-Tested up to: 3.0.1
-Stable tag: 1.0
+Tested up to: 4.7.3
+Stable tag: 1.8
+Version: 1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -95,5 +96,19 @@ This is mostly because you made a mistake typing / copying your API key. Check t
 
 == Changelog ==
 
+= 1.7 =
+* Fixed selected category not showing up on query settings page
+= 1.6 =
+* Fixed selected category not showing up on query settings page
+= 1.5 =
+* Fixed playlist importing videos
+= 1.4 =
+* Support HTTP / HTTPS protocol
+= 1.3 =
+* Fix max results number as wp options
+= 1.2 =
+* Fix major bug : max results number is optional now.
+= 1.1 =
+* Fix ressource type 'video'
 = 1.0 =
 * Plugin init
