@@ -3,9 +3,8 @@ Contributors: enguerranws
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BQNTS4S2PEQVN
 Tags: youtube, content, videos, enguerranws, google api, youtube api, youtube importer, video importer
 Requires at least: 3.0.1
-Tested up to: 4.7.3
-Stable tag: 1.8
-Version: 1.8
+Tested up to: 4.8.3
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -96,6 +95,12 @@ This is mostly because you made a mistake typing / copying your API key. Check t
 
 == Changelog ==
 
+= 2.0 =
+* Added a "Approve all" button in order to add all listed videos in a single shot
+* Fixed issues: escaping double quote character, removed unecessary parameters
+= 1.9 =
+* Switched `file_get_contents` to `media_sideload_image`, alert now throws Google error messages.
+* Can select a specific post status for created posts
 = 1.7 =
 * Fixed selected category not showing up on query settings page
 = 1.6 =

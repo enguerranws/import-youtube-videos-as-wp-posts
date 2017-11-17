@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Youtube to Posts v1.0\n"
+"Project-Id-Version: Import YouTube videos as WP Posts v1.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-11-07 12:56:40+0000\n"
+"PO-Revision-Date: 2017-11-14 10:31:27+0000\n"
 "Last-Translator: admin <enguerrandeep@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,19 +20,13 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: youtube-to-posts.php:263
-#: youtube-to-posts.php:264
-#@ yt_to_posts
-msgid "Youtube to Posts"
-msgstr "Youtube to Posts"
-
-#: youtube-to-posts.php:349
-#: youtube-to-posts.php:350
+#: import-youtube-videos-as-wp-post.php:330
+#: import-youtube-videos-as-wp-post.php:331
 #@ default
 msgid "Y2P rejects"
 msgstr "Y2P rejects"
 
-#: admin.php:107
+#: admin.php:126
 #@ youtube-to-posts
 msgid "Media added !"
 msgstr "Vidéo ajoutée !"
@@ -62,42 +56,42 @@ msgstr "La valeur par défaut est de 30"
 msgid "Post type to feed:"
 msgstr "Type de post à alimenter :"
 
-#: admin.php:104
+#: admin.php:123
 #@ youtube-to-posts
 msgid "Results from Youtube for:"
 msgstr "Résultats récupérés depuis Youtube pour la requête :"
 
-#: admin.php:117
+#: admin.php:136
 #@ youtube-to-posts
 msgid "Getting the posts, please wait..."
 msgstr "Chargement des vidéos, veuillez patienter..."
 
-#: admin.php:120
+#: admin.php:139
 #@ youtube-to-posts
 msgid "Load more videos"
 msgstr "Charger plus de vidéos"
 
-#: admin.php:110
+#: admin.php:129
 #@ youtube-to-posts
 msgid "Video preview"
 msgstr "Miniature"
 
-#: admin.php:111
+#: admin.php:130
 #@ youtube-to-posts
 msgid "Video title"
 msgstr "Titre de la vidéo"
 
-#: admin.php:112
+#: admin.php:131
 #@ youtube-to-posts
 msgid "Video description"
 msgstr "Description de la vidéo"
 
-#: admin.php:113
+#: admin.php:132
 #@ youtube-to-posts
 msgid "Upload date"
 msgstr "Date d'upload"
 
-#: admin.php:114
+#: admin.php:133
 #@ youtube-to-posts
 msgid "Actions"
 msgstr "Actions"
@@ -152,22 +146,22 @@ msgstr "Tapez votre requête."
 msgid "If your query type is a playlist or a user, then you must type the relevant playlist / user ID."
 msgstr "Si votre requête correspond à une playlist ou une chaîne Youtube, vous devez renseigner l'ID de celle-ci."
 
-#: admin.php:65
+#: admin.php:84
 #@ youtube-to-posts
 msgid "Taxonomy term to feed:"
 msgstr "Terme de taxonomie à remplir :"
 
-#: admin.php:82
+#: admin.php:101
 #@ youtube-to-posts
 msgid "Published:"
 msgstr "Publié:"
 
-#: admin.php:105
+#: admin.php:124
 #@ youtube-to-posts
 msgid "Results are ordered by date, newest first."
 msgstr "Les résultats sont rangés par date, les plus récents en premier."
 
-#: admin.php:124
+#: admin.php:144
 #@ youtube-to-posts
 msgid "Your Youtube API access is not defined, go set it on the <a href=\"options-general.php?page=youtube-to-posts\">settings page</a>."
 msgstr "Vous n'avez pas renseigné de clé d'API Youtube, renseignez-là sur <a href=\"options-general.php?page=youtube-to-posts\">la page d'options</a>."
@@ -308,7 +302,8 @@ msgstr "ex :Dernière vidéo par %user% - %title%"
 msgid "Default content is %embed%<br>%description%"
 msgstr "Par défaut : %embed%<br>%description%"
 
-#: admin.php:62
+#: admin.php:64
+#: admin.php:81
 #@ youtube-to-posts
 msgid "If you select a custom post type, be sure it supports Post Thumbnails."
 msgstr "Si vous sélectionnez un type de publication personnalisé, assurez-vous qu'il supporte les images à la une (Post Thumbnails)."
@@ -327,4 +322,25 @@ msgstr "Vidéo ajoutée !"
 #@ youtube-to-posts
 msgid "Video rejected !"
 msgstr "Vidéo supprimée !"
+
+#: admin.php:67
+#@ youtube-to-posts
+msgid "Post status of created posts:"
+msgstr "Status des articles nouvellement créés:"
+
+#: import-youtube-videos-as-wp-post.php:241
+#: import-youtube-videos-as-wp-post.php:242
+#@ yt_to_posts
+msgid "Youtube importer"
+msgstr ""
+
+#: admin.php:140
+#@ youtube-to-posts
+msgid "Approve all listed videos"
+msgstr "Ajouter toutes les vidéos listées d'un coup"
+
+#: admin.php:140
+#@ youtube-to-posts
+msgid "Adding videos, please wait..."
+msgstr "Vidéos en cours d'ajout, veuillez patienter..."
 

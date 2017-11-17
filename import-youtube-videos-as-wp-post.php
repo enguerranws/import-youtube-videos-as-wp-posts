@@ -4,7 +4,7 @@
   Plugin Name: Import YouTube videos as WP Posts
   Plugin URI: http://www.enguerranweiss.fr
   Description: Get a video list from a request to Youtube (free query, playlist ID, channel ID) and add their content to your own Wordpress :)
-  Version: 1.8
+  Version: 2.0
   Author: Enguerran Weiss
   Author URI: http://www.enguerranweiss.fr
  */
@@ -52,9 +52,13 @@ add_action("wp_ajax_nopriv_yt_to_posts_getAllPostSlug", "yt_to_posts_getAllPostS
   ---------------------------------------------------------------------------- */
 
 
-function yt_to_posts_getAllPostSlug() { // Returns an array of all Youtube ID (to check dupes)
+function yt_to_posts_getStati() {
+  return get_post_stati(array(), 'names');
+}
 
-  $args = array( 'posts_per_page' => -1);
+function yt_to_posts_getAllPostSlug() { // Returns an array of all Youtube ID (to check dupes)
+  $stati = yt_to_posts_getStati();
+  $args = array( 'numberposts' => -1, 'post_status' => $stati);
   $posts = get_posts($args);
   $ids = array();
   foreach ($posts as $post) {
@@ -147,6 +151,7 @@ function yt_to_posts_insertPost(){ // Setting and calling wp_insert_post();
     $author = get_option('yt_to_posts_author');
     $imgSrc = $_POST['imgSrc'];
     $query = $_POST['query'];
+    $status = get_option('yt_to_posts_post_status');
     $postType = get_option('yt_to_posts_post_type');
     $cat = intval(get_option('yt_to_posts_cat'));
     $title_template = get_option('yt_to_posts_title_format');
@@ -155,71 +160,46 @@ function yt_to_posts_insertPost(){ // Setting and calling wp_insert_post();
     $embed = '[embed]'.$_POST['mediaUrl'].'[/embed]';
     $content = $embed . ' <br> '. $description;
     $templateVals = array($title, $content, $embed, $imgSrc, $query, $user, $date );
-    //var_dump($content, $embed, $imgSrc, $query, $author, $date);
+
     // If template selected, construct the title
     if($title_template !== ''){
-
-
         $customTitle = preg_replace( $replacers, $templateVals, $title_template);
 
         $title = $customTitle;
-
-
-
     }
      if($content_template !== ''){
-
-
         $customContent = preg_replace($replacers, $templateVals, $content_template);
         $content = $customContent;
-
-
-
-
     }
 
     // Creating new post
     $my_post = array(
       'post_title'    => $title,
       'post_content'  => $content,
-      'post_status'   => 'publish',
+      'post_status'   => $status,
       'post_author'   => $author,
       'post_type'     => $postType,
       'post_category' => array($cat)
     );
 
     $post_ID = wp_insert_post($my_post);
-    //var_dump($post_ID);
+
     // updating post meta
     // if a media is detected, add its source url
     if($imgSrc){
       add_post_meta( $post_ID, 'media_url', $imgSrc, true ) || update_post_meta( $post_ID, 'media_url', $imgSrc );
+
+      add_post_meta( $post_ID, 'yt_id', $id, true );
+      // Create and upload thumbnail with $title as description
+      $image = media_sideload_image($imgSrc, $title);
+
+      // then find the last image added to the post attachments
+      $attachments = get_posts(array('numberposts' => '1', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'DESC', 'orderby' => 'date'));
+      // Set this attachment as post thumbnail
+      if(sizeof($attachments) > 0){
+          set_post_thumbnail($post_ID, $attachments[0]->ID);
+      }
     }
-    add_post_meta( $post_ID, 'yt_id', $id, true );
-    // Create and upload thumbnail
-    $upload_dir = wp_upload_dir();
-    $image_data = file_get_contents($imgSrc);
-    $filename = $id.basename($imgSrc);
-    if(wp_mkdir_p($upload_dir['path']))
-        $file = $upload_dir['path'] . '/' . $filename;
-    else
-        $file = $upload_dir['basedir'] . '/' . $filename;
-    file_put_contents($file, $image_data);
-
-    $wp_filetype = wp_check_filetype($filename, null );
-    $attachment = array(
-        'post_mime_type' => $wp_filetype['type'],
-        'post_title' => sanitize_file_name($filename),
-        'post_content' => '',
-        'post_status' => 'inherit'
-    );
-    $attach_id = wp_insert_attachment( $attachment, $file, $post_ID );
-    require_once(ABSPATH . 'wp-admin/includes/image.php');
-    $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
-    wp_update_attachment_metadata( $attach_id, $attach_data );
-
-    set_post_thumbnail( $post_ID, $attach_id );
-
     echo 'ok';
     die();
 }
@@ -302,7 +282,7 @@ function yt_to_posts_feed_admin() {
 
 function yt_to_posts_api_call(){
 
-    require_once(dirname(__FILE__) ."/api/yt-feed.php"); // Path to youtube interface
+    require_once(dirname(__FILE__) ."/youtube-api-interface.php"); // Path to youtube interface
     die();
 }
 
@@ -326,6 +306,7 @@ function yt_to_posts_register_options() { //register our settings
 
   register_setting( 'yt_to_posts-query-settings-group', 'yt_to_posts_query' );
   register_setting( 'yt_to_posts-query-settings-group', 'yt_to_posts_post_type' );
+  register_setting( 'yt_to_posts-query-settings-group', 'yt_to_posts_post_status' );
   register_setting( 'yt_to_posts-query-settings-group', 'yt_to_posts_cat' );
   register_setting( 'yt_to_posts-query-settings-group', 'yt_to_posts_author' );
   register_setting( 'yt_to_posts-query-settings-group', 'yt_to_posts_query_type' );

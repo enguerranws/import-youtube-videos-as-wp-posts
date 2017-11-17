@@ -76,9 +76,3 @@ It's because you didn't fill the API key field (in the settings page) with your 
 
 ### I got the message : 'There is an error with your API key, it has been rejected by Google API Service.'
 This is mostly because you made a mistake typing / copying your API key. Check the API key field in the Settings page.
-
-
-# Changelog
-
-### 1.0
-* Plugin init

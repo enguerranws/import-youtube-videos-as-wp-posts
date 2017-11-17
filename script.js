@@ -18,23 +18,19 @@ var ajaxGetYoutube = {
         ajaxGetYoutube.loadMore();
         ajaxGetYoutube.updateCategories('#updateCatOnChange');
         ajaxGetYoutube.checkForChange();
+        ajaxGetYoutube.approveAllButton();
+        
     },
     checkForChange: function() {
-        // jQuery('#queryOptions').find('input, select').on('change', function() {
-        //     console.log(ajaxGetYoutube);
-        //     ajaxGetYoutube.queryFormChanged = true;
-        //     ajaxGetYoutube.showAlert('needUpdate');
-        // });
+
     },
     showAlert: function(message) {
         var msg;
         if (message === "needUpdate") {
             msg = ajaxGetYoutube.trans.needUpdate;
-        }
-        else if (message === "mediaAdded") {
+        } else if (message === "mediaAdded") {
             msg = ajaxGetYoutube.trans.mediaAdded;
-        }
-        else if (message === "mediaRejected") {
+        } else if (message === "mediaRejected") {
             msg = ajaxGetYoutube.trans.mediaRejected;
         }
         jQuery('.updated-custom p').html(msg).fadeIn(function() {
@@ -62,17 +58,10 @@ var ajaxGetYoutube = {
                         } else {
                             html += '<option value="' + response[i].id + '" >' + response[i].name + '</option>';
                         }
-
-
-
                     }
                     return html;
                 });
             }
-
-
-
-
         });
     },
     getPostIdsAndRun: function(container, tag, lastID) {
@@ -149,9 +138,9 @@ var ajaxGetYoutube = {
                 for (var i = 0; i < data.items.length; i++) {
 
 
-                    if (ids.indexOf(data.items[i].id) === -1) {
+                    if (ids.indexOf(data.items[i].id) === -1 && data.items[i].id) {
 
-                        html += '<li class="result" data-id="' + data.items[i].id + '"><div class="thumb"><a href="' + data.items[i].media_url + '" target="_blank" ><img src="' + data.items[i].thumb_url + '" /></a></div><div>' + data.items[i].title + '</div><div class="content">' + data.items[i].description + '</div><div class="date">' + data.items[i].date + '</div><div class="buttons"><a data-id="' + data.items[i].id + '" data-src="' + data.items[i].media_url + '"  data-content="' + data.items[i].description + '" data-title= "' + data.items[i].title + '" class="btn-deny button button-secondary" href="#">' + ajaxGetYoutube.trans.deny + '</a><a data-title= "' + data.items[i].title + '" data-id="' + data.items[i].id + '" data-src="' + data.items[i].media_url + '" data-content="' + data.items[i].description + '" data-date="' + data.items[i].date + '" data-embed-url="' + data.items[i].embed_url + '" data-media-url="' + data.items[i].media_url + '" data-thumbnail-url="' + data.items[i].thumb_url + '" data-user="' + data.items[i].channel_title + '" class="btn-approve button button-primary" href="#">' + ajaxGetYoutube.trans.approve + '</a></div></li>';
+                        html += '<li class="result" data-id="' + data.items[i].id + '"><div class="thumb"><a href="' + data.items[i].media_url + '" target="_blank" ><img src="' + data.items[i].thumb_url + '" /></a></div><div>' + data.items[i].title + '</div><div class="content">' + data.items[i].description + '</div><div class="date">' + data.items[i].date + '</div><div class="buttons"><a data-id="' + data.items[i].id + '" data-src="' + data.items[i].media_url + '"  data-content="' + data.items[i].description + '" data-title= "' + ajaxGetYoutube.escapeDoubleQuotes(data.items[i].title) + '" class="btn-deny button button-secondary" href="#">' + ajaxGetYoutube.trans.deny + '</a><a data-title= "' + ajaxGetYoutube.escapeDoubleQuotes(data.items[i].title) + '" data-id="' + data.items[i].id + '" data-src="' + data.items[i].media_url + '" data-content="' + data.items[i].description + '" data-date="' + data.items[i].date + '" data-embed-url="' + data.items[i].embed_url + '" data-media-url="' + data.items[i].media_url + '" data-thumbnail-url="' + data.items[i].thumb_url + '" data-user="' + data.items[i].channel_title + '" class="btn-approve button button-primary" href="#">' + ajaxGetYoutube.trans.approve + '</a></div></li>';
 
                     }
 
@@ -160,34 +149,58 @@ var ajaxGetYoutube = {
 
                 }
                 $this.find('ul').append(html);
-                jQuery('#loadMore').removeClass('hidden');
+                jQuery('#loadMore, #approveAllBtn').removeClass('hidden');
             } else {
 
                 alert('No results found');
             }
             if (ajaxGetYoutube.nextPageToken === null) {
-                jQuery('#loadMore').addClass('hidden');
+                jQuery('#loadMore, #approveAllBtn').addClass('hidden');
             }
 
         }).error(function(err) {
-            console.log(err);
-            alert(ajaxGetYoutube.trans.apiWrong);
+            console.error(err);
+            alert(ajaxGetYoutube.trans.apiWrong + ' => ' + err.statusText);
         });
 
 
+    },
+    toggleBtnContainer: function () {
+        if(jQuery('.btn-approve').is(':visible')){
+            
+        }
+        else {
+            jQuery('#btnContainer').hide();
+        }
+    },
+    escapeDoubleQuotes: function (str) {
+        return str.replace('"', '&quot;')
+                  .replace('"', '&quot;')
+                  .replace('“', '&quot;')
+                  .replace('”', '&quot;');
+    },
+    approveAllButton: function () {
+        jQuery(document).on('click', '#approveAllBtn',  function (e) {
+            e.preventDefault();
+            jQuery('#approveAllBtn').text(jQuery('#approveAllBtn').attr('data-loading-str')).addClass('button-disabled');
+            jQuery('.btn-approve').trigger('click');
+        });
     },
     insertPost: function() {
         jQuery(document).on('click', '.btn-approve', function(e) {
             e.preventDefault();
             var $that = jQuery(this);
             var id = $that.attr('data-id');
-            var title = $that.attr('data-title');
+            var title = ajaxGetYoutube.escapeDoubleQuotes($that.attr('data-title'));
             var content = $that.attr('data-content');
             var imgSrc = $that.attr('data-thumbnail-url');
             var embed = $that.attr('data-embed-url');
             var mediaUrl = $that.attr('data-media-url');
             var username = $that.attr('data-user');
             var date = $that.attr('data-date');
+
+            console.log(title, $that.attr('data-title'))
+
             var data = {
                 'action': 'yt_to_posts_insertPost',
                 'id': id,
@@ -208,6 +221,7 @@ var ajaxGetYoutube = {
                 if (response === 'ok') {
                     $that.parents('.result').fadeOut();
                     ajaxGetYoutube.showAlert('mediaAdded');
+                    
                 }
             });
         });
@@ -244,7 +258,7 @@ var ajaxGetYoutube = {
 
         loadButton.on('click', function(e) {
             ajaxGetYoutube.lastID = jQuery(container).find('ul > li:last-child.result').attr('data-id');
-
+            jQuery('#approveAllBtn').removeClass('button-disabled');
             e.preventDefault();
             ajaxGetYoutube.nbPage++;
             //jQuery(container).after('<div class="results" id="results-'+ajaxGetYoutube.nbPage+'" />');
